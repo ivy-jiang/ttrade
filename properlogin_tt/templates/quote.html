@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{{super()}}
+<div>
+
+      <h1>Quote Price </h1>
+      <form method="post">
+    		<h3>What company ticker you want to quote the price for?</h3>
+    		<input name="quotez" placeholder="ticker here" type="text"> <br>
+<br>
+        <input type="submit">
+
+      </form>
+<br>
+      <h3>  {{message2}}</h3>
+
+</div>
+{% endblock %}

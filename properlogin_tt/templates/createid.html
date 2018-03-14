@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block title %}
+    <title>Create New User TermTrader</title>
+{% endblock %}
+
+{% block custom1 %}
+  <h1 class="brand-heading"> Create ..</h1>
+  <p class="intro-text"> new user</p>
+{% endblock custom1 %}
+
+{% block custom2 %}
+ {{super()}}
+<div>
+
+	<form action="/createid" method="post">
+		<h5>.. Create username: </h5>
+		<input name="createname" placeholder="what is the id number?" type="text"> <br>
+
+    <h5> and the password?</h5>
+		<input name="createpassword" placeholder="password?" type="password"> <br>
+
+    <h5> confirm password?</h5>
+		<input name="createpassword2" placeholder="password?" type="password"> <br>
+
+    <input type="submit">
+			</form>
+
+
+		<p> {{message}}</p>
+
+</div>
+{% endblock custom2 %}

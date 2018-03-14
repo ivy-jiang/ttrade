@@ -1,0 +1,38 @@
+
+{% extends "index.html" %}
+
+{{super()}}
+<title>
+My terminal trader app</title>
+
+<!-- {{super()}} -->
+
+<!-- begin body -->
+
+<!-- START CONTENT -->
+{% block content %}
+{{super()}}
+
+<h2>Your Stats</h2>
+    <h5>
+    <p><b>Your User ID:<i> {{idno}} </i><b><br>
+    <b> Your balance: <i>{{balance}} </i><b><br>
+    <b> Your earnings: <i>{{earnings}} </i><b></p>
+    </h5>
+    <p>You are charged 8 dollars per transaction.</p>
+<br><br>
+
+
+  <h2>Menu Options</h2>
+<b>
+<ul class="menu">
+  <a href="{{ url_for('portfolio',  balance=balance, earnings=earnings, idno=idno, xbal=xbal, xearn=xearn) }}">Portfolio</a>
+  <br>  <a href="{{ url_for('buy', balance=balance, earnings=earnings, idno=idno, xbal=xbal, xearn=xearn) }}">Buy</a>
+  <br>  <a href="{{ url_for('sell', balance=balance, earnings=earnings, idno=idno, xbal=xbal, xearn=xearn) }}">Sell</a>
+  <br>  <a href="{{ url_for('lookup', balance=balance, earnings=earnings, idno=idno, xbal=xbal, xearn=xearn) }}">Lookup</a>
+  <br>  <a href="{{ url_for('quote', balance=balance, earnings=earnings, idno=idno, xbal=xbal, xearn=xearn) }}">Quote</a>
+  <br>  <a href="{{ url_for('home') }}">Exit</a>
+</ul>
+</b>
+
+{% endblock %}

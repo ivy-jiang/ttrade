@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+{{super()}}
+<div>
+
+      <h1>Sell </h1>
+      <form method="post">
+    		<h3>What ticker/company stock you want to sell?</h3>
+    		<input name="tickersymz" placeholder="ticker here" type="text"> <br>
+
+        <h3>What trade volume you want to sell?</h3>
+        <input name="tradevol" placeholder="trade vol here" type="number"> <br>
+    <br>
+        <input type="submit">
+
+      </form>
+<br>
+      <h3>  {{message2}}</h3>
+
+</div>
+{% endblock %}

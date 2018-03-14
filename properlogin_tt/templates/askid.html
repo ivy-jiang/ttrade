@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block title %}
+    <title>Asking ID TermTrader</title>
+{% endblock %}
+
+{% block custom1 %}
+  <h1 class="brand-heading"> You said yes</h1>
+  <p class="intro-text"> to having a user ID...</p>
+{% endblock custom1 %}
+
+{% block custom2 %}
+ {{super()}}
+<div>
+	<form action="/askid" method="post">
+		<h5>.. so what is the username?</h5>
+		<input name="idask" placeholder="what is the id number?" type="text"> <br>
+
+    <h5> and the password?</h5>
+		<input name="passwordz" placeholder="password?" type="password"> <br>
+
+
+    <input type="submit">
+			</form>
+		<p> {{message}}</p>
+
+</div>
+{% endblock custom2 %}

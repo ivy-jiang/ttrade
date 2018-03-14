@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+{{super()}}
+<div>
+
+<h3>Portfolio </h3>
+<p>Here are your holdings: </p>
+<center>
+<b><i>{{name1}}</b></i>
+{{data | safe}}
+
+<p><b><i> {{message}} </i><b></p>
+</center>
+
+</div>
+
+{% endblock %}

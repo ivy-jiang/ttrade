@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block head %}
+
+{{super()}}
+  {% endblock head %}
+
+{% block title %}
+    <title>User TermTrader</title>
+{% endblock title %}
+
+{% block custom1 %}
+  <h1 class="brand-heading"> User or Not</h1>
+  <p class="intro-text"> Input User ID or Create New</p>
+{% endblock custom1 %}
+
+
+
+
+{% block custom2 %}
+<div>
+	<i>Checking if user exists...</i>
+	<form action="/user/<message>" method="post">
+		<h5>Do u have user id?</h5>
+		<input name="userexist" placeholder="yes or no" type="text"> <br>
+		<input type="submit">
+	</form>
+<br>
+		<p> {{message}}</p>
+
+</div>
+{% endblock custom2 %}
